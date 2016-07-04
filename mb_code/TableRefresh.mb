@@ -1,0 +1,301 @@
+'*******************************************************************************
+'**   Created by Peter Horsbøll Møller, Pitney Bowes Business Insight
+'** 	Program:
+'** 	Modul:
+'**
+'*******************************************************************************
+
+'-------------------------------------
+Include "Library\MapBasic.def"
+Include "Library\Icons.def"
+Include "Library\Menu.def"
+'**default constants...
+Include "Library\Defaults.def"
+
+Define xProgram 		"TableRefresh"
+Define xProgramMenu		"TableRefresh"
+Define xVersion 		"0.4"
+Define xYear			"2015"
+Define xAddToMenuBar	FALSE
+
+Define FILE_INI			ApplicationDirectory$() & xProgram & ".ini"
+Define FILE_DBG			ApplicationDirectory$() & xProgram & ".dbg"
+
+'-------------------------------------
+Include "Library\ProgramInfo.def"
+Include "Library\CONFIGFileLib.def"
+Include "Library\DATETIMELib.def"
+Include "Library\DEBUGLib.def"
+Include "Library\ERRORLib.def"
+Include "Library\FILELib.def"
+Include "Library\STRINGLib.def"
+Include "Library\TABLELib.def"
+
+'-----------------------------------------------------------------------------------------
+Declare Sub Main
+Declare Sub EndProgram
+
+Declare Sub RefreshTable(ByVal sFile As String)
+Declare Function RefreshWFSTable(ByVal sTab As String) As Logical
+Declare Function RefreshLinkedTable(ByVal sTab As String) As Logical
+
+Declare Sub AddToErroFileList(ByVal sFile As String)
+Declare Sub WriteToLogFile(ByVal sMessage As String)
+
+Dim	msLogFile As String,
+	mbRefreshWFS, mbRefreshDBMSLinked As Logical,
+	mnNumErrorFiles As Integer,
+	marrErrorTabFiles() As String
+'**********************************************************************************************''
+'**   Created by Peter Horsbøll Møller, Pitney Bowes Business Insight
+'
+'**********************************************************************************************''
+Sub Main
+
+Dim	sPath, arrFiles() As String,
+	i, nNumFiles As Integer,
+	bSearchSubFolders As Logical
+
+OnError GoTo ErrorOccured
+
+	'***Initializing ApplicationInfo
+	Call PRGISetApplicationName(xProgram)
+	Call PRGISetApplicationVersion(xVersion)
+	Call PRGISetApplicationCopyrightYear(xYear)
+	Call PRGISetApplicationDevelopedBy("Peter Horsbøll Møller")
+
+	'***Enabling Debug if file exists
+	Call DEBUGEnableByFile(FILE_DBG)
+
+	msLogFile	= ApplicationDirectory$() & "TableRefresh " & DATEGetDateAsYYYYMMDD(CurDate(), "-") & ".txt"
+	sPath = CONFIGReadKey(FILE_INI, "TABLEREFRESH", "PATH")
+	If sPath = "" Then
+		sPath = ApplicationDirectory$()
+	Else
+		sPath = FILEGetAbsolutePath(ApplicationDirectory$(), sPath)
+	End If
+
+	Call WriteToLogFile("**********************************************************************************")
+	Call WriteToLogFile(xProgram & " " & xVersion)
+	Call WriteToLogFile("**********************************************************************************")
+	Call WriteToLogFile(DATEGetDateAsYYYYMMDD(CurDate(), "-") & " " & Time(24))
+	Call WriteToLogFile("**********************************************************************************")
+	Call WriteToLogFile("Path: " & sPath)
+
+	mbRefreshWFS		= CONFIGReadKey(FILE_INI, "TABLEREFRESH", "REFRESH_WFS")
+	mbRefreshDBMSLinked	= CONFIGReadKey(FILE_INI, "TABLEREFRESH", "REFRESH_DBMSLINKED")
+
+	Call WriteToLogFile("Refresh WFS: " & Str$(mbRefreshWFS))
+	Call WriteToLogFile("Refresh DBMS: " & Str$(mbRefreshDBMSLinked))
+
+	Redim arrFiles(0)
+	bSearchSubFolders = STRINGNumberToLogical(CONFIGReadKey(FILE_INI, "TABLEREFRESH", "SUBFOLDERS"))
+
+	If bSearchSubFolders Then
+		Call WriteToLogFile("Search Sub folder: Yes")
+	Else
+		Call WriteToLogFile("Search Sub folder: No")
+	End If
+
+	nNumFiles = FILEFindFiles(sPath, "*.tab", TRUE, bSearchSubFolders, arrFiles())
+	Call WriteToLogFile("**********************************************************************************")
+	Call WriteToLogFile("Number of found files (*.tab): " & nNumFiles)
+	Call WriteToLogFile("**********************************************************************************")
+
+	For i = 1 To Ubound(arrFiles)
+		Call RefreshTable(arrFiles(i))
+	Next
+
+	Call WriteToLogFile("**********************************************************************************")
+	Call WriteToLogFile("Tables that failed in some way: " & mnNumErrorFiles)
+	Call WriteToLogFile("**********************************************************************************")
+	If mnNumErrorFiles > 0 Then
+		For i = 1 to mnNumErrorFiles
+			Call WriteToLogFile(marrErrorTabFiles(i))
+		Next
+		Call WriteToLogFile("**********************************************************************************")
+	End If
+
+	If CONFIGReadKey(FILE_INI, "TABLEREFRESH", "EXITMIPRO") = "1" Then
+		End MapInfo
+	End If
+
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "Main")
+	Call ERRShow()
+
+End Sub
+
+'****************************************
+'**   Created by Peter Horsbøll Møller, Pitney Bowes Business Insight
+'**   Ending MapBasic application
+'****************************************
+Sub EndProgram
+
+OnError GoTo ErrorOccured
+
+	End Program
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "EndProgram")
+	Call ERRShow()
+
+End Sub
+
+'**********************************************************************************************''
+'Created by Peter Horsbøll Møller, Pitney Bowes Business Insight
+'Parameters:
+'
+'**********************************************************************************************''
+Sub RefreshTable(ByVal sFile As String)
+
+Dim	sTab As String
+
+OnError GoTo ErrorOccured
+
+	Call WriteToLogFile("------------------------------------------------------------")
+	If NOT FileExists(sFile) Then
+		Call WriteToLogFile("File doesn't seem to exist: " & sFile)
+		Call AddToErroFileList(sFile)
+		Exit Sub
+	End If
+
+	Call WriteToLogFile("Opening: " & sFile)
+	Open Table sFile
+	sTab = TableInfo(0, TAB_INFO_NAME)
+	Do Case TableInfo(sTab, TAB_INFO_TYPE)
+		Case TAB_TYPE_LINKED
+			Call WriteToLogFile("Type: Linked, ODBC")
+			If mbRefreshDBMSLinked Then
+				If NOT RefreshLinkedTable(sTab) Then
+					Call AddToErroFileList(sFile)
+				End If
+			End If
+		Case TAB_TYPE_WFS
+			Call WriteToLogFile("Type: WFS")
+			If mbRefreshWFS Then
+				If NOT RefreshWFSTable(sTab) Then
+					Call AddToErroFileList(sFile)
+				End If
+			End If
+		Case Else
+			Call WriteToLogFile("Type: Other")
+			'**Do nothing
+	End Case
+	Call WriteToLogFile("Closing: " & sTab)
+	Close Table sTab
+
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "RefreshTable")
+	Call WriteToLogFile(ERRGetLatestFullDescription(FALSE))
+	Call AddToErroFileList(sFile)
+
+End Sub
+
+'**********************************************************************************************''
+'Created by Peter Horsbøll Møller, Pitney Bowes Business Insight
+'Parameters:
+'
+'**********************************************************************************************''
+Function RefreshWFSTable(ByVal sTab As String) As Logical
+
+OnError GoTo ErrorOccured
+
+RefreshWFSTable = FALSE
+
+	Call WriteToLogFile("Refreshing WFS")
+	WFS Refresh Table sTab
+	RefreshWFSTable	= TRUE
+
+	Exit Function
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "RefreshWFSTable")
+'	Call WriteToLogFile(ERRGetLatestFullDescription(FALSE))
+
+End Function
+
+'**********************************************************************************************''
+'Created by Peter Horsbøll Møller, Pitney Bowes Business Insight
+'Parameters:
+'
+'**********************************************************************************************''
+Function RefreshLinkedTable(ByVal sTab As String) As Logical
+
+OnError GoTo ErrorOccured
+
+RefreshLinkedTable = FALSE
+
+	If NOT TableInfo(sTab, TAB_INFO_EDITED) Then
+		Call WriteToLogFile("Refreshing DBMS")
+		Server Refresh sTab
+		RefreshLinkedTable = TRUE
+	Else
+		Call WriteToLogFile("Table has unsaved changes")
+	End If
+	Exit Function
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "RefreshLinkedTable")
+	Call WriteToLogFile(ERRGetLatestFullDescription(FALSE))
+
+End Function
+
+'**********************************************************************************************''
+'Created by Peter Horsbøll Møller, Pitney Bowes Business Insight
+'Parameters:
+'
+'**********************************************************************************************''
+Sub AddToErroFileList(ByVal sFile As String)
+
+OnError GoTo ErrorOccured
+
+	mnNumErrorFiles	= mnNumErrorFiles + 1
+	Redim marrErrorTabFiles(mnNumErrorFiles)
+	marrErrorTabFiles(mnNumErrorFiles)	= sFile
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "AddToErroFileList")
+	Call ERRShow()
+
+End Sub
+
+
+'**********************************************************************************************''
+'Created by Peter Horsbøll Møller, Pitney Bowes Business Insight
+'Parameters:
+'
+'**********************************************************************************************''
+Sub WriteToLogFile(ByVal sMessage As String)
+
+Dim	sLine As String
+
+OnError GoTo ErrorOccured
+
+	Open File msLogFile
+		For Append
+		As #775
+		CharSet SystemInfo(SYS_INFO_CHARSET)
+
+	sLine	= Time(24) & " " & sMessage
+	Print sLine
+	Print #775, sLine
+
+	Close File #775
+
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "WriteToLogFile")
+	Call ERRShow()
+	Close File #775
+
+End Sub
+
+

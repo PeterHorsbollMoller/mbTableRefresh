@@ -1,0 +1,21 @@
+'**Requires MapInfo Pro 4.0
+
+'Is been used by the ProgramInfo module
+
+Declare Sub DEBUGEnableByFile(  ByVal sFile As String		'Name of file to exist to enable debug state
+					)
+Declare Sub DEBUGEnable(	  ByVal bValue As Logical	'Value (true/false) to set the debug state to
+					)
+
+Declare Function DEBUGIsEnabled() As Logical			'Returns true if Debug is enabled
+
+Declare Sub DEBUGPrint(	  ByVal sMessage As String		'Message to print to the message window - and write to debug file.
+				)
+Declare Sub DEBUGNote(
+				ByVal sMessage As String		'Message to show in messagebox - and write to debug file.
+				)
+
+'Note this function is automatically called from DEBUGPrint() and DEBUGNote()
+Declare Sub DEBUGWriteToFile(
+					ByVal sMessage As String	'Message to write to debug file.
+					)

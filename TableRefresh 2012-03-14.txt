@@ -1,0 +1,342 @@
+14:39:45 **********************************************************************************
+14:39:45 TableRefresh 0.3
+14:39:45 **********************************************************************************
+14:39:45 2012-03-14 14:39:45
+14:39:45 **********************************************************************************
+14:39:45 Path: D:\3. Demo\Grønne Områder
+14:39:45 Refresh WFS: T
+14:39:45 Refresh DBMS: T
+14:39:45 Search Sub folder: No
+14:39:45 **********************************************************************************
+14:39:45 Number of found files (*.tab): 0
+14:39:45 **********************************************************************************
+14:39:45 **********************************************************************************
+14:39:45 Tables that failed in some way: 0
+14:39:45 **********************************************************************************
+14:40:07 **********************************************************************************
+14:40:07 TableRefresh 0.3
+14:40:07 **********************************************************************************
+14:40:07 2012-03-14 14:40:07
+14:40:07 **********************************************************************************
+14:40:07 Path: D:\3. Demo\Grønne Områder
+14:40:07 Refresh WFS: T
+14:40:07 Refresh DBMS: T
+14:40:07 Search Sub folder: Yes
+14:40:07 **********************************************************************************
+14:40:07 Number of found files (*.tab): 78
+14:40:07 **********************************************************************************
+14:40:07 ------------------------------------------------------------
+14:40:07 Opening: D:\3. Demo\Grønne Områder\Bellinge\Anden Anvendelse.TAB
+14:40:08 Type: Other
+14:40:08 Closing: Anden_Anvendelse
+14:40:08 ------------------------------------------------------------
+14:40:08 Opening: D:\3. Demo\Grønne Områder\Bellinge\Belægninger.TAB
+14:40:08 Type: Other
+14:40:08 Closing: Belægninger
+14:40:08 ------------------------------------------------------------
+14:40:08 Opening: D:\3. Demo\Grønne Områder\Bellinge\Blomsterbede.TAB
+14:40:08 Type: Other
+14:40:08 Closing: Blomsterbede
+14:40:08 ------------------------------------------------------------
+14:40:08 Opening: D:\3. Demo\Grønne Områder\Bellinge\Græs.TAB
+14:40:08 Type: Other
+14:40:08 Closing: Græs
+14:40:08 ------------------------------------------------------------
+14:40:08 Opening: D:\3. Demo\Grønne Områder\Bellinge\Skilte.TAB
+14:40:08 Type: Other
+14:40:08 Closing: Skilte
+14:40:08 ------------------------------------------------------------
+14:40:08 Opening: D:\3. Demo\Grønne Områder\Bellinge\test.TAB
+14:40:08 Type: Other
+14:40:08 Closing: test
+14:40:08 ------------------------------------------------------------
+14:40:08 Opening: D:\3. Demo\Grønne Områder\Bellinge\testDecember.TAB
+14:40:08 Type: Other
+14:40:08 Closing: testDecember
+14:40:08 ------------------------------------------------------------
+14:40:08 Opening: D:\3. Demo\Grønne Områder\Bellinge\Udstyr.TAB
+14:40:08 Type: Other
+14:40:08 Closing: Udstyr
+14:40:08 ------------------------------------------------------------
+14:40:08 Opening: D:\3. Demo\Grønne Områder\Bellinge\Vand.TAB
+14:40:08 Type: Other
+14:40:08 Closing: Vand
+14:40:08 ------------------------------------------------------------
+14:40:08 Opening: D:\3. Demo\Grønne Områder\Boldbaner\Anden Anvendelse.TAB
+14:40:08 Type: Other
+14:40:08 Closing: Anden_Anvendelse
+14:40:08 ------------------------------------------------------------
+14:40:08 Opening: D:\3. Demo\Grønne Områder\Boldbaner\Belægninger.TAB
+14:40:08 Type: Other
+14:40:08 Closing: Belægninger
+14:40:08 ------------------------------------------------------------
+14:40:08 Opening: D:\3. Demo\Grønne Områder\Boldbaner\Græs.TAB
+14:40:08 Type: Other
+14:40:08 Closing: Græs
+14:40:08 ------------------------------------------------------------
+14:40:08 Opening: D:\3. Demo\Grønne Områder\Boldbaner\Udstyr.TAB
+14:40:08 Type: Other
+14:40:08 Closing: Udstyr
+14:40:08 ------------------------------------------------------------
+14:40:08 Opening: D:\3. Demo\Grønne Områder\Boldbaner\Vand.TAB
+14:40:08 Type: Other
+14:40:08 Closing: Vand
+14:40:08 ------------------------------------------------------------
+14:40:08 Opening: D:\3. Demo\Grønne Områder\Centrum\Belægninger.TAB
+14:40:08 Type: Other
+14:40:08 Closing: Belægninger
+14:40:08 ------------------------------------------------------------
+14:40:08 Opening: D:\3. Demo\Grønne Områder\Centrum\Blomsterbede.TAB
+14:40:09 Type: Other
+14:40:09 Closing: Blomsterbede
+14:40:09 ------------------------------------------------------------
+14:40:09 Opening: D:\3. Demo\Grønne Områder\Centrum\Græs.TAB
+14:40:09 Type: Other
+14:40:09 Closing: Græs
+14:40:09 ------------------------------------------------------------
+14:40:09 Opening: D:\3. Demo\Grønne Områder\Centrum\Udstyr.TAB
+14:40:09 Type: Other
+14:40:09 Closing: Udstyr
+14:40:09 ------------------------------------------------------------
+14:40:09 Opening: D:\3. Demo\Grønne Områder\Centrum\Vand.TAB
+14:40:09 Type: Other
+14:40:09 Closing: Vand
+14:40:09 ------------------------------------------------------------
+14:40:09 Opening: D:\3. Demo\Grønne Områder\Fruens Bøge\Anden Anvendelse.TAB
+14:40:09 Type: Other
+14:40:09 Closing: Anden_Anvendelse
+14:40:09 ------------------------------------------------------------
+14:40:09 Opening: D:\3. Demo\Grønne Områder\Fruens Bøge\Belægninger.TAB
+14:40:09 Type: Other
+14:40:09 Closing: Belægninger
+14:40:09 ------------------------------------------------------------
+14:40:09 Opening: D:\3. Demo\Grønne Områder\Fruens Bøge\Blomsterbede.TAB
+14:40:09 Type: Other
+14:40:10 Closing: Blomsterbede
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Fruens Bøge\Græs.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Græs
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Fruens Bøge\Udstyr.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Udstyr
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Fruens Bøge\Vand.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Vand
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Korup\Anden Anvendelse.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Anden_Anvendelse
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Korup\Belægninger.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Belægninger
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Korup\Blomsterbede.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Blomsterbede
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Korup\Græs.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Græs
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Korup\Udstyr.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Udstyr
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Korup\Vand.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Vand
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Kragsbjerg\Anden Anvendelse.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Anden_Anvendelse
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Kragsbjerg\Belægninger.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Belægninger
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Kragsbjerg\Blomsterbede.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Blomsterbede
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Kragsbjerg\Græs.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Græs
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Kragsbjerg\Udstyr.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Udstyr
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Kragsbjerg\Vand.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Vand
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Næsby\Anden Anvendelse.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Anden_Anvendelse
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Næsby\Belægninger.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Belægninger
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Næsby\Blomsterbede.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Blomsterbede
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Næsby\Græs.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Græs
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Næsby\Udstyr.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Udstyr
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Næsby\Vand.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Vand
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Sanderum\Anden Anvendelse.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Anden_Anvendelse
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Sanderum\Belægninger.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Belægninger
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Sanderum\Blomsterbede.TAB
+14:40:10 Type: Other
+14:40:10 Closing: Blomsterbede
+14:40:10 ------------------------------------------------------------
+14:40:10 Opening: D:\3. Demo\Grønne Områder\Sanderum\Græs.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Græs
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Sanderum\Udstyr.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Udstyr
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Sanderum\Vand.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Vand
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Seden\Anden Anvendelse.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Anden_Anvendelse
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Seden\Belægninger.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Belægninger
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Seden\Blomsterbede.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Blomsterbede
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Seden\Græs.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Græs
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Seden\Udstyr.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Udstyr
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Seden\Vand.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Vand
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Skove\Anden Anvendelse.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Anden_Anvendelse
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Skove\Belægninger.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Belægninger
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Skove\Blomsterbede.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Blomsterbede
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Skove\Græs.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Græs
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Skove\Udstyr.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Udstyr
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Skove\Vand.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Vand
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Søhus\Belægninger.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Belægninger
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Søhus\Blomsterbede.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Blomsterbede
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Søhus\Græs.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Græs
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Søhus\Udstyr.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Udstyr
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Søhus\Vand.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Vand
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Tornbjerg\Anden Anvendelse.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Anden_Anvendelse
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Tornbjerg\Belægninger.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Belægninger
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Tornbjerg\Blomsterbede.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Blomsterbede
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Tornbjerg\Græs.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Græs
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Tornbjerg\Udstyr.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Udstyr
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Tornbjerg\Vand.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Vand
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Vollsmose\Anden Anvendelse.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Anden_Anvendelse
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Vollsmose\Belægninger.TAB
+14:40:11 Type: Other
+14:40:11 Closing: Belægninger
+14:40:11 ------------------------------------------------------------
+14:40:11 Opening: D:\3. Demo\Grønne Områder\Vollsmose\Blomsterbede.TAB
+14:40:12 Type: Other
+14:40:12 Closing: Blomsterbede
+14:40:12 ------------------------------------------------------------
+14:40:12 Opening: D:\3. Demo\Grønne Områder\Vollsmose\Græs.TAB
+14:40:12 Type: Other
+14:40:12 Closing: Græs
+14:40:12 ------------------------------------------------------------
+14:40:12 Opening: D:\3. Demo\Grønne Områder\Vollsmose\Udstyr.TAB
+14:40:12 Type: Other
+14:40:12 Closing: Udstyr
+14:40:12 ------------------------------------------------------------
+14:40:12 Opening: D:\3. Demo\Grønne Områder\Vollsmose\Vand.TAB
+14:40:12 Type: Other
+14:40:12 Closing: Vand
+14:40:12 **********************************************************************************
+14:40:12 Tables that failed in some way: 0
+14:40:12 **********************************************************************************
